@@ -10,6 +10,7 @@ const notoSansTc = Noto_Sans_TC({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
   title: "Paperrolls",
   description: "讓你以使用收件匣般的方式管理你的統一發票！",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
