@@ -1,0 +1,28 @@
+"use client";
+
+import { Suspense } from "react";
+import * as ToastPrimitive from "@radix-ui/react-toast";
+
+import { Toast } from "@/features/toast";
+import { Uploader } from "@/features/uploader";
+import { Header, Navigation } from "@/components";
+
+export function MainLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex h-screen select-none flex-col bg-blue-50 transition-all dark:bg-neutral-900 dark:text-neutral-300">
+      <Header />
+      <div className="flex h-[calc(100dvh-4rem)]">
+        <Navigation />
+        <main className="mb-20 flex grow overflow-hidden border-white bg-white transition-all dark:border-neutral-800 dark:bg-neutral-800 md:mb-2 md:mr-2 md:rounded-xl md:border">
+          <Uploader>
+            <Suspense>{children}</Suspense>
+            <ToastPrimitive.ToastProvider>
+              <Toast />
+              <ToastPrimitive.Viewport />
+            </ToastPrimitive.ToastProvider>
+          </Uploader>
+        </main>
+      </div>
+    </div>
+  );
+}
