@@ -8,12 +8,12 @@ import { MainLayout } from "@/components";
 const notoSansTc = Noto_Sans_TC({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: process.env.META_TITLE,
-  description: process.env.META_DESCRIPTION,
+  title: process.env.NEXT_PUBLIC_META_TITLE,
+  description: process.env.NEXT_PUBLIC_META_DESCRIPTION,
   manifest: "/manifest.json",
   openGraph: {
-    url: process.env.META_OG_URL,
-    images: [{ url: `${process.env.META_OG_IMAGE}` }],
+    url: process.env.NEXT_PUBLIC_META_OG_URL,
+    images: [{ url: `${process.env.NEXT_PUBLIC_META_OG_IMAGE}` }],
   },
 };
 
