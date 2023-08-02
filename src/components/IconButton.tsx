@@ -1,8 +1,6 @@
 import { cloneElement, MouseEventHandler, ReactElement } from "react";
-// import Ripples from "react-ripples";
 
 interface IconButtonProps {
-  className?: string;
   disabled?: boolean;
   icon: ReactElement;
   label: string;
@@ -10,18 +8,12 @@ interface IconButtonProps {
 }
 
 export function IconButton({
-  // className,
   disabled,
   icon,
   label,
   onClick,
 }: IconButtonProps) {
   return (
-    // <Ripples
-    //   className={`h-10 w-10 rounded-full ${className}`}
-    //   during={400}
-    //   color={disabled ? "rgba(0,0,0,0)" : "rgba(0,0,0,.3)"}
-    // >
     <button
       type="button"
       className={`group/icon h-10 w-10 rounded-full transition-all ${
@@ -38,6 +30,5 @@ export function IconButton({
         } ${icon.props.className}`,
       })}
     </button>
-    // </Ripples>
   );
 }

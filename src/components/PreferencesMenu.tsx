@@ -2,12 +2,8 @@
 
 import { useState } from "react";
 import { Popover } from "@headlessui/react";
-
-import { resetDatabase } from "@/models";
-
 import { Button, Dialog, Divider, Icon, ThemeOptions } from "@/components";
-// import { ReactComponent as IconDeleteForever } from "@/assets/images/icons/delete-forever.svg";
-// import { ReactComponent as IconMoreVert } from "@/assets/images/icons/more-vert.svg";
+import { resetDatabase } from "@/models";
 
 export function PreferencesMenu() {
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
@@ -18,7 +14,6 @@ export function PreferencesMenu() {
         aria-label="開啟帳戶選單"
         className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full p-1 transition-all hover:bg-black/10 focus:bg-black/10 focus:outline-none dark:hover:bg-white/25 dark:focus:bg-white/25"
       >
-        {/* <IconMoreVert className="fill-current" /> */}
         <Icon name="more_vert" />
       </Popover.Button>
 

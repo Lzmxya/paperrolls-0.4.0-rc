@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-// import Ripples from "react-ripples";
 import { FloatingActionButton, Icon } from "@/components";
 
 const destinations = [
@@ -29,7 +28,6 @@ export function Navigation() {
       <ul className="my-3 flex justify-evenly gap-3 md:mt-5 md:flex-col">
         {destinations.map(({ icon, label, path }) => (
           <li key={path} className="flex h-14 items-center justify-center">
-            {/* <Ripples className="rounded-full"> */}
             <Link href={path} key={path} className="group p-2">
               <>
                 <div className="relative my-1 flex h-8 w-14">
@@ -47,7 +45,6 @@ export function Navigation() {
                 <div className="text-center text-xs">{label}</div>
               </>
             </Link>
-            {/* </Ripples> */}
           </li>
         ))}
       </ul>

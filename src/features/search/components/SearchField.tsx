@@ -52,7 +52,6 @@ export function SearchField() {
         className="flex h-full items-center"
       >
         <label htmlFor="q" className="p-3">
-          {/* <IconSearch className="fill-current opacity-60" /> */}
           <Icon name="search" />
         </label>
         <input
@@ -70,15 +69,16 @@ export function SearchField() {
           }}
         />
         {searchInputValue !== "" && (
-          <IconButton
-            label="清除"
-            icon={<Icon name="cancel" />}
-            onClick={() => {
-              setSearchInputValue("");
-              inputRef.current?.focus();
-            }}
-            className="mr-1 shrink-0"
-          />
+          <div className="mr-1">
+            <IconButton
+              label="清除"
+              icon={<Icon name="cancel" />}
+              onClick={() => {
+                setSearchInputValue("");
+                inputRef.current?.focus();
+              }}
+            />
+          </div>
         )}
       </form>
       <div

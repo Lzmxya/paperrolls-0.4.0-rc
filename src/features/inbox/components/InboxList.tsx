@@ -18,10 +18,6 @@ import { archiveReceipts, IReceipt, ReceiptGroup } from "@/models";
 import { InboxButtonStar } from "./InboxButtonStar";
 import { SearchHighlighter } from "@/features/search";
 import { Avatar, Icon, IconButton } from "@/components";
-// import { ReactComponent as Check } from "@/assets/images/icons/check.svg";
-// import { ReactComponent as Delete } from "@/assets/images/icons/delete.svg";
-// import { ReactComponent as Archive } from "@/assets/images/icons/archive.svg";
-// import { ReactComponent as Unarchive } from "@/assets/images/icons/unarchive.svg";
 
 type PartialReceiptGroup = Partial<ReceiptGroup>;
 
@@ -129,7 +125,6 @@ export function InboxList({ receipts, receiptGroups }: InboxListProps) {
                 >
                   {checkedReceipts.includes(invNum) ? (
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-400">
-                      {/* <Check className="fill-current" /> */}
                       <Icon name="check" />
                     </div>
                   ) : (

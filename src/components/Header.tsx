@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useAppSelector } from "@/libs/redux";
 
 import { InboxSelectionBar } from "@/features/inbox";
-// import { PreferencesMenu } from "@/features/preferences";
 import { SearchField } from "@/features/search";
 import { PreferencesMenu } from "@/components";
 

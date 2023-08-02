@@ -26,17 +26,6 @@ import {
   IconButton,
   Label,
 } from "@/components";
-// import Divider from "@/components/Divider";
-// import DropdownMenu from "@/components/DropdownMenu";
-// import EmptyScreen from "@/components/EmptyScreen";
-// import IconButton from "@/components/IconButton";
-// import Label from "@/components/Label";
-// import { ReactComponent as ChevronLeft } from "@/assets/images/icons/chevron-left.svg";
-// import { ReactComponent as ChevronRight } from "@/assets/images/icons/chevron-right.svg";
-// import { ReactComponent as Close } from "@/assets/images/icons/close.svg";
-// import { ReactComponent as Delete } from "@/assets/images/icons/delete.svg";
-// import { ReactComponent as Archive } from "@/assets/images/icons/archive.svg";
-// import { ReactComponent as Unarchive } from "@/assets/images/icons/unarchive.svg";
 
 interface InboxDetailProps {
   data: IReceipt[];
