@@ -94,17 +94,19 @@ export function SearchField() {
               label="有星號"
               isOn={isStarred}
               setIsOn={setIsStarred}
-              onClick={() =>
-                setFilterStarred(isStarred ? null : true, "replaceIn")
-              }
+              onClick={() => {
+                window.history.replaceState(null, window.document.title, ".");
+                setFilterStarred(isStarred ? null : true, "replaceIn");
+              }}
             />
             <ChipFilter
               label="已封存"
               isOn={isArchived}
               setIsOn={setIsArchived}
-              onClick={() =>
-                setFilterArchived(isArchived ? null : true, "replaceIn")
-              }
+              onClick={() => {
+                window.history.replaceState(null, window.document.title, ".");
+                setFilterArchived(isArchived ? null : true, "replaceIn");
+              }}
             />
             <AmountFilter />
           </div>
