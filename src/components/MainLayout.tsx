@@ -1,6 +1,5 @@
 "use client";
 
-import { Suspense } from "react";
 import * as ToastPrimitive from "@radix-ui/react-toast";
 
 import { Toast } from "@/features/toast";
@@ -15,7 +14,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         <Navigation />
         <main className="mb-20 flex grow overflow-hidden border-white bg-white transition-all dark:border-neutral-800 dark:bg-neutral-800 md:mb-2 md:mr-2 md:rounded-xl md:border">
           <Uploader>
-            <Suspense>{children}</Suspense>
+            {children}
             <ToastPrimitive.ToastProvider>
               <Toast />
               <ToastPrimitive.Viewport />
