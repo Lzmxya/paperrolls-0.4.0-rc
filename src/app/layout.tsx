@@ -8,9 +8,13 @@ import { MainLayout } from "@/components";
 const notoSansTc = Noto_Sans_TC({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Paperrolls",
-  description: "讓你以使用收件匣般的方式管理你的統一發票！",
+  title: process.env.META_TITLE,
+  description: process.env.META_DESCRIPTION,
   manifest: "/manifest.json",
+  openGraph: {
+    url: process.env.META_OG_URL,
+    images: [{ url: `${process.env.META_OG_IMAGE}` }],
+  },
 };
 
 export default function RootLayout({
