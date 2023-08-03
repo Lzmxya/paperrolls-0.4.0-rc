@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { FloatingActionButton, Icon } from "@/components";
 
@@ -19,6 +19,7 @@ const destinations = [
 
 export function Navigation() {
   const pathname = usePathname();
+  const searchParams = `?${useSearchParams().toString()}`;
 
   return (
     <nav className="fixed bottom-0 z-10 w-full shrink-0 bg-blue-50 transition-all dark:bg-neutral-800 md:static md:w-20 md:bg-transparent md:dark:bg-transparent">
@@ -28,7 +29,11 @@ export function Navigation() {
       <ul className="my-3 flex justify-evenly gap-3 md:mt-5 md:flex-col">
         {destinations.map(({ icon, label, path }) => (
           <li key={path} className="flex h-14 items-center justify-center">
-            <Link href={path} key={path} className="group p-2">
+            <Link
+              href={`${path}${searchParams}`}
+              key={path}
+              className="group p-2"
+            >
               <>
                 <div className="relative my-1 flex h-8 w-14">
                   <div
